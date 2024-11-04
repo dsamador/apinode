@@ -1,12 +1,11 @@
 import {   
   Column,   
   Entity,    
-  //OneToMany, 
   PrimaryGeneratedColumn
   } 
 from "typeorm"
 
-import { Audit } from "./Audit";
+import { Audit } from "./Base/Audit";
 
 @Entity('marca_pieza')
 export class MarcaPiezaEntity extends Audit {
@@ -20,9 +19,5 @@ export class MarcaPiezaEntity extends Audit {
     type:"varchar",
     length: 150
   })
-  nombre_marca_pieza: String;  
-
-  /*@OneToMany(() => PiezaEntity, (pieza) => pieza.marca) 
-  piezas: PiezaEntity[];*/
-
+  nombre_marca_pieza: String;
 }

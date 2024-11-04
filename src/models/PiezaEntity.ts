@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn
 } 
 from "typeorm"
-import { Audit } from "./Audit";
+import { Audit } from "./Base/Audit";
 import { MarcaPiezaEntity } from "./MarcaPiezaEntity";
 
 @Entity('pieza')

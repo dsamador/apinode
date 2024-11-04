@@ -13,6 +13,6 @@ export const AppDataSource = new DataSource({
     database: "mimotico",
     logging: true,
     entities: [MarcaPiezaEntity, PiezaEntity],
-    synchronize: true
+    synchronize: false
 
 });
