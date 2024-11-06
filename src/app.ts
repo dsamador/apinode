@@ -5,7 +5,6 @@ import marcaPiezaRoutes from './routes/MarcaPieza.route';
 import piezaRoutes from './routes/Pieza.route';
 
 
-
 const app = express();
 
 app.use(express.json());
