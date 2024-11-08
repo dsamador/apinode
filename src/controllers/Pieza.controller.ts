@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { PiezaEntity } from "../models/PiezaEntity";
+import { validateCreatePieza } from "../validators/Pieza.validator";
 
 class PiezaController {
   constructor(){}
@@ -26,6 +27,7 @@ class PiezaController {
   }
 
   async register(req: Request, res: Response){
+    
     try {
       const registro = await PiezaEntity.save(req.body);
       res.status(201).json(registro);
@@ -34,7 +36,7 @@ class PiezaController {
         res.status(500).send(error.message);
     }
   }
-
+  
   async update(req: Request, res: Response){
     const { id } = req.params;
 
